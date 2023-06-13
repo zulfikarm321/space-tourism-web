@@ -8,12 +8,17 @@ nav {
 
     .logo {
         width: 48px;
+        margin-right: 50px;
     }
 
     .nav-icon {
         position: relative;
         z-index: 5;
         cursor: pointer;
+    }
+
+    .divider {
+        display: none;
     }
 
     .nav-links {
@@ -36,12 +41,13 @@ nav {
         }
 
         .nav-link {
-            color: white;
+            color: rgba(255, 255, 255, 0.795);
             position: relative;
             text-transform: uppercase;
 
             span {
-                color: #000;
+                color: white;
+                margin-right: 10px;
             }
         }
 
@@ -110,8 +116,10 @@ nav {
         right: 0;
         transition: all 0.3s ease-in-out;
     }
+}
 
-    @media screen and (min-width: 760px) {
+@media screen and (min-width: 760px) {
+    nav {
         padding: 0 0 0 40px;
 
         .nav-links-dropdown,
@@ -120,9 +128,43 @@ nav {
         }
         .nav-links {
             display: flex;
+
+            span {
+                display: none;
+            }
         }
         .head {
             font-size: 150px;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    nav {
+        padding: 80px 0 0 40px;
+
+        .nav-links-dropdown,
+        .nav-icon {
+            display: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            padding: 40px 100px;
+
+            span {
+                display: inline;
+            }
+        }
+        .head {
+            font-size: 150px;
+        }
+
+        .divider {
+            position: relative;
+            z-index: 2;
+            right: -20px;
+            display: block;
         }
     }
 }

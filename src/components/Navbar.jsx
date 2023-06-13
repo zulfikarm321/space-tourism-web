@@ -23,6 +23,7 @@ function Navbar() {
             <Link to="/" className="logo">
                 <img src={logoIcon} alt="logo icon" />
             </Link>
+            <div className="divider"></div>
             <div
                 className="nav-icon"
                 onClick={() => setShowMenu((prev) => !prev)}
@@ -45,6 +46,7 @@ function Navbar() {
                             : 'nav-link'
                     }
                 >
+                    <span>00</span>
                     Home
                 </NavLink>
                 <NavLink
@@ -57,6 +59,7 @@ function Navbar() {
                             : 'nav-link'
                     }
                 >
+                    <span>01</span>
                     Destination
                 </NavLink>
                 <NavLink
@@ -69,6 +72,7 @@ function Navbar() {
                             : 'nav-link'
                     }
                 >
+                    <span>02</span>
                     Crew
                 </NavLink>
                 <NavLink
@@ -81,6 +85,7 @@ function Navbar() {
                             : 'nav-link'
                     }
                 >
+                    <span>03</span>
                     Technology
                 </NavLink>
             </ul>
