@@ -1,0 +1,128 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    .logo {
+        width: 48px;
+    }
+
+    .nav-icon {
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        align-items: center;
+        gap: 30px;
+        height: 100%;
+        padding: 40px;
+        position: relative;
+
+        .bg-blur {
+            width: inherit;
+            height: inherit;
+            width: 100%;
+            background-color: #9797971c;
+            position: absolute;
+            backdrop-filter: blur(20px);
+            top: 0;
+            right: 0;
+        }
+
+        .nav-link {
+            color: white;
+            position: relative;
+            text-transform: uppercase;
+
+            span {
+                color: #000;
+            }
+        }
+
+        .nav-link::after {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: 3px;
+            bottom: -30px;
+            left: 0;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .nav-links-dropdown {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 60%;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        z-index: 3;
+
+        .bg-blur {
+            height: 100%;
+            width: 100%;
+            background-color: #9797971c;
+            position: absolute;
+            backdrop-filter: blur(20px);
+            top: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 100px 20px;
+
+            .nav-link {
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+
+                span {
+                    font-weight: bold;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .nav-links-dropdown.active {
+        right: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (min-width: 760px) {
+        padding: 0 0 0 40px;
+
+        .nav-links-dropdown,
+        .nav-icon {
+            display: none;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .head {
+            font-size: 150px;
+        }
+    }
+}

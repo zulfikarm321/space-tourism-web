@@ -1,0 +1,267 @@
+.crew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .content-sub-heading {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+
+        span {
+            margin-right: 20px;
+            color: rgba(255, 255, 255, 0.493);
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .crew-image {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 50vw;
+            }
+        }
+
+        .crew-option {
+            font-family: 'Barlow Condensed', sans-serif;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: #d0d6f9;
+            margin: 20px;
+
+            div {
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255, 255, 255, 0.493);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            div.active {
+                background-color: white;
+            }
+        }
+
+        .crew-content {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .crew-content-role {
+                text-transform: uppercase;
+                font-family: 'Bellefair', serif;
+                color: rgba(255, 255, 255, 0.644);
+                font-size: 16px;
+            }
+
+            .crew-content-name {
+                text-transform: uppercase;
+                font-family: 'Bellefair', serif;
+                color: white;
+                font-size: 24px;
+                line-height: 40px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .crew {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        .content-sub-heading {
+            font-family: 'Barlow Condensed', sans-serif;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+
+            span {
+                margin-right: 20px;
+                color: rgba(255, 255, 255, 0.493);
+            }
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, max-content);
+            gap: 40px;
+            grid-template-areas:
+                'content'
+                'image';
+            justify-items: center;
+
+            .crew-image {
+                grid-area: image;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 50vw;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                grid-area: content;
+
+                .crew-option {
+                    grid-area: option;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    display: flex;
+                    gap: 30px;
+                    color: #d0d6f9;
+                    margin: 20px;
+
+                    div {
+                        width: 10px;
+                        height: 10px;
+                        background-color: rgba(255, 255, 255, 0.493);
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+
+                    div.active {
+                        background-color: white;
+                    }
+                }
+
+                .crew-content {
+                    text-align: center;
+                    margin: 20px 0;
+
+                    .crew-content-role {
+                        text-transform: uppercase;
+                        color: rgba(255, 255, 255, 0.644);
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    .crew-content-name {
+                        text-transform: uppercase;
+                        color: white;
+                        font-size: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .crew {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 100px;
+
+        .content-sub-heading {
+            font-family: 'Barlow Condensed', sans-serif;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+
+            span {
+                margin-right: 20px;
+                color: rgba(255, 255, 255, 0.493);
+            }
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: 'content image';
+            justify-items: center;
+
+            .crew-image {
+                grid-area: image;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 35vw;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                grid-area: content;
+                gap: 50px;
+
+                .crew-option {
+                    grid-area: option;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    display: flex;
+                    color: #d0d6f9;
+                    margin: 0;
+                    transition: all 0.2s ease-in-out;
+
+                    .circle {
+                        width: 10px;
+                        height: 10px;
+                        background-color: rgba(255, 255, 255, 0.493);
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+
+                    .circle.active {
+                        background-color: white;
+                    }
+
+                    .circle:hover {
+                        background-color: white;
+                    }
+                }
+
+                .crew-content {
+                    text-align: center;
+                    align-items: flex-start;
+                    margin: 20px 0;
+
+                    .crew-content-role {
+                        text-transform: uppercase;
+                        color: rgba(255, 255, 255, 0.644);
+                        font-size: 32px;
+                        margin-bottom: 20px;
+                    }
+
+                    .crew-content-name {
+                        text-transform: uppercase;
+                        color: white;
+                        font-size: 55px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
