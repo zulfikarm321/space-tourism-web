@@ -20,8 +20,10 @@ function Navbar() {
 
     return (
         <nav>
-            <Link to="/" className="logo">
-                <img src={logoIcon} alt="logo icon" />
+            <Link to="/">
+                <div className="logo">
+                    <img src={logoIcon} alt="logo icon" />
+                </div>
             </Link>
             <div className="divider"></div>
             <div

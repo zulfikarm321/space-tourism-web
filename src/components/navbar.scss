@@ -7,8 +7,9 @@ nav {
     padding: 20px;
 
     .logo {
-        width: 48px;
         margin-right: 50px;
+        width: 48px;
+        height: 48px;
     }
 
     .nav-icon {
@@ -150,10 +151,14 @@ nav {
         .nav-links {
             display: flex;
             gap: 50px;
-            padding: 40px 100px;
+            padding: 50px 150px;
 
             span {
                 display: inline;
+            }
+
+            .nav-link::after {
+                bottom: -40px;
             }
         }
         .head {
