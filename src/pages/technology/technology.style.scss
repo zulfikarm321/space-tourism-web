@@ -1,0 +1,83 @@
+@import '../../App.scss';
+
+#technology {
+  padding: 50px 0 50px 10vw;
+
+  @media (max-width: 960px) {
+    padding: 50px 0 50px 0;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 960px) {
+      flex-direction: column-reverse;
+    }
+
+    .tech-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $ascent;
+
+      @media (max-width: 960px) {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 5vw;
+      }
+
+      .option {
+        margin-right: 4vw;
+
+        @media (max-width: 960px) {
+          display: flex;
+          margin: 2vh 0 4vh;
+        }
+
+        div {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          margin-bottom: 32px;
+          border: 1px solid white;
+          font-size: 32px;
+          color: white;
+
+          @media (max-width: 960px) {
+            margin: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+          }
+
+          &.active {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+        text-transform: uppercase;
+        color: white;
+        margin: 1vh 0 2vh;
+      }
+    }
+
+    .tech-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

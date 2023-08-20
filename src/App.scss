@@ -1,81 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    font-family: 'Barlow Condensed', sans-serif;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
-}
-
-body {
-    overflow-x: hidden;
-    color: wheat;
+  max-width: 100%;
 }
 
 .app {
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-.paragraph {
-    font-family: 'Barlow', sans-serif;
-    color: #d0d6f9c5;
-    font-size: 15px;
-    line-height: 27px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 300;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .divider {
-    height: 1px;
-    width: 100%;
-    background-color: #d0d6f9c5;
+  height: 1px;
+  width: 100%;
+  background-color: #d0d6f9c5;
 }
 
-.content-sub-heading {
-    font-family: 'Barlow Condensed', sans-serif;
+#home,
+#crew,
+#destination,
+#technology {
+  min-height: calc(100vh - (98px + 40px));
+
+  .page-header {
+    font-size: clamp(1rem, 0.7359rem + 1.1268vw, 1.75rem);
     color: white;
-    font-size: 20px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
 
     span {
-        margin-right: 20px;
-        color: rgba(255, 255, 255, 0.493);
+      color: gray;
+      margin-right: 1vw;
     }
+  }
 }
 
-@media screen and (min-width: 760px) {
-    .content-sub-heading {
-        width: 100%;
-        padding-left: 20px;
-        text-align: start;
-    }
+$ascent: #d0d6f9;
 
-    .paragraph {
-        width: 50%;
-    }
+.bellefair {
+  font-family: 'Bellefair', serif;
+  font-weight: 300;
 }
 
-@media screen and (min-width: 1280px) {
-    .paragraph {
-        text-align: start;
-        width: 100%;
-        font-size: 18px;
-    }
+.paragraph {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

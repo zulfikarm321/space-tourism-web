@@ -1,0 +1,71 @@
+@import '../../App.scss';
+
+#home {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0 10vw;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    margin: 50px 0;
+    gap: 50px;
+    text-align: center;
+  }
+
+  & > * {
+    flex: 1;
+  }
+
+  .header-text {
+    color: $ascent;
+
+    span {
+      font-size: 28px;
+    }
+
+    h1 {
+      font-family: 'Bellefair', serif;
+      font-size: clamp(5rem, 2.6729rem + 7.4468vw, 9.375rem);
+      font-weight: 400;
+      color: white;
+    }
+
+    p {
+      max-width: 450px;
+      line-height: 32px;
+    }
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-explore {
+    width: 274px;
+    height: 274px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 2px 60px rgba(255, 255, 255, 0.116);
+    }
+
+    @media (max-width: 600px) {
+      width: 150px;
+      height: 150px;
+      font-size: 20px;
+
+      &:hover {
+        box-shadow: 0px 0px 2px 40px rgba(255, 255, 255, 0.116);
+      }
+    }
+  }
+}

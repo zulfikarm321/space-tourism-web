@@ -1,0 +1,127 @@
+@import '../../App.scss';
+
+#destination {
+  padding: 50px 10vw;
+
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    gap: 10vw;
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    & > * {
+      flex: 1;
+    }
+
+    .destination-image {
+      @media (max-width: 960px) {
+        width: 50vw;
+      }
+
+      &.animate {
+        animation: slide-in 0.3s linear;
+      }
+
+      img {
+        animation: spin infinite 20s linear;
+      }
+    }
+
+    .destination-content {
+      color: $ascent;
+
+      &.animate {
+        animation: fade 0.3s linear;
+      }
+
+      .option {
+        display: flex;
+        margin-bottom: 30px;
+
+        @media (max-width: 960px) {
+          justify-content: center;
+        }
+
+        div {
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin-right: 2vw;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: white;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+          }
+
+          &.active {
+            color: white;
+          }
+
+          &.active::after {
+            width: 95%;
+          }
+        }
+      }
+
+      h2 {
+        font-size: clamp(3.5rem, 2.5317rem + 4.1315vw, 6.25rem);
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      p {
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        max-width: 400px;
+        font-weight: 300;
+      }
+
+      .details {
+        display: flex;
+
+        @media (max-width: 960px) {
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        div {
+          margin: 30px 40px 0 0;
+
+          @media (max-width: 960px) {
+            margin: 30px 0 10px;
+          }
+
+          span {
+            font-weight: 300;
+            letter-spacing: 1px;
+          }
+
+          h4 {
+            margin-top: 10px;
+            font-size: 28px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
